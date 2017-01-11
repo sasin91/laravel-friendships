@@ -16,6 +16,17 @@ class Friendship extends Model
      * @var array
      */
     protected $guarded = ['id', 'created_at', 'updated_at'];
+    
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'sender_id'     =>  'integer',
+        'recipient_id'  =>  'integer',
+        'status'        =>  'integer'
+    ];
 
     /**
      * @param array $attributes
